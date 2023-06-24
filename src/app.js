@@ -4,7 +4,9 @@ const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; //My Code - To block some permissions exception
-const app = express()
+const app = express();
+
+const port = process.env.PORT || 3000; //TO RUN APP ON LIVE AND LOCAL
 //Define paths for express config
 const publicDirPath = path.join(__dirname,'../public');
 const viewsDirPath = path.join(__dirname,"../templates/views");
@@ -93,6 +95,6 @@ app.get('*', (req, res) => {
     });
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port 3000.')
 })
