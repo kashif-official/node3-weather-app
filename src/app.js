@@ -23,14 +23,14 @@ app.use(express.static(publicDirPath));
 app.get('', (req, res) => {
     res.render('index',{
         title:"Weather App",
-        name:"Andrew Mead"
+        name:"Muhammad Kashif Rafique"
     });
 })
 
 app.get('/help', (req, res) => {
     res.render('help',{
         title:"Help",
-        name:"Andrew Mead",
+        name:"Muhammad Kashif Rafique",
         helpText:"This is some help text."
     })
 })
@@ -38,7 +38,7 @@ app.get('/help', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about',{
         title:"About Me",
-        name:"Andrew Mead"
+        name:"Muhammad Kashif Rafique"
     })
 })
 
@@ -83,14 +83,14 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404',{
         title:'404',
-        name:'Andrew Mead',
+        name:'Muhammad Kashif Rafique',
         errorMessage: 'Help Article Not Found !'
     });
 })
 app.get('*', (req, res) => {
     res.render('404',{
         title:'404',
-        name:'Andrew Mead',
+        name:'Muhammad Kashif Rafique',
         errorMessage: 'Page Not Found !'
     });
 })
